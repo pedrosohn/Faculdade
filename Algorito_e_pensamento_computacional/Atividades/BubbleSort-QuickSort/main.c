@@ -48,3 +48,11 @@ int particionar(float notas[], int baixo, int alto) {
     notas[alto] = temp;
     return (i + 1);
 }
+// Algoritmo Quick Sort (Recursivo)
+void quickSort(float notas[], int baixo, int alto) {
+    if (baixo < alto) {
+        int pi = particionar(notas, baixo, alto);
+        quickSort(notas, baixo, pi - 1);
+        quickSort(notas, pi + 1, alto);
+    }
+}
