@@ -55,4 +55,14 @@ void quickSort(float notas[], int baixo, int alto) {
         quickSort(notas, baixo, pi - 1);
         quickSort(notas, pi + 1, alto);
     }
-}
+}}
+int main() {
+    int tamanho = 10;
+    
+    // Arrays declarados sem valores fixos
+    float notasOriginais[10];
+    float notasBubble[10];
+    float notasQuick[10];
+
+    printf("   SISTEMA DE CLASSIFICACAO DE NOTAS ESCOLARES    \n");
+}    
