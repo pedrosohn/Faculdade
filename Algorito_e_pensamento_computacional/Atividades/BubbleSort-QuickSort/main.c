@@ -14,3 +14,18 @@ void copiarArray(float origem[], float destino[], int tamanho) {
         destino[i] = origem[i];
     }
 }
+// Algoritmo Bubble Sort (Ordem Decrescente)
+void bubbleSort(float notas[], int tamanho) {
+    int i, j;
+    float temp;
+    for (i = 0; i < tamanho - 1; i++) {
+        for (j = 0; j < tamanho - i - 1; j++) {
+            // Para ordem decrescente, se o elemento atual for MENOR que o próximo, trocamos
+            if (notas[j] < notas[j + 1]) {
+                temp = notas[j];
+                notas[j] = notas[j + 1];
+                notas[j + 1] = temp;
+            }
+        }
+    }
+}
