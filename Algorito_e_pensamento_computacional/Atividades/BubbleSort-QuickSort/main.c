@@ -29,3 +29,22 @@ void bubbleSort(float notas[], int tamanho) {
         }
     }
 }
+// Função auxiliar de partição para o Quick Sort (Ordem Decrescente)
+int particionar(float notas[], int baixo, int alto) {
+    float pivo = notas[alto]; 
+    int i = (baixo - 1);
+    float temp;
+
+    for (int j = baixo; j <= alto - 1; j++) {
+        if (notas[j] >= pivo) {
+            i++;
+            temp = notas[i];
+            notas[i] = notas[j];
+            notas[j] = temp;
+        }
+    }
+    temp = notas[i + 1];
+    notas[i + 1] = notas[alto];
+    notas[alto] = temp;
+    return (i + 1);
+}
