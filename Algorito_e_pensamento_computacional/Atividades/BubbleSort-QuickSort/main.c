@@ -55,7 +55,7 @@ void quickSort(float notas[], int baixo, int alto) {
         quickSort(notas, baixo, pi - 1);
         quickSort(notas, pi + 1, alto);
     }
-}}
+}
 int main() {
     int tamanho = 10;
     
@@ -65,4 +65,10 @@ int main() {
     float notasQuick[10];
 
     printf("   SISTEMA DE CLASSIFICACAO DE NOTAS ESCOLARES    \n");
-}    
+// Coleta as 10 notas digitadas pelo usuário
+    printf("Por favor, digite as %d notas dos estudantes (ex: 7.5):\n", tamanho);
+    for (int i = 0; i < tamanho; i++) {
+        printf("Nota %d: ", i + 1);
+        scanf("%f", &notasOriginais[i]);
+    }
+    printf("\n");
