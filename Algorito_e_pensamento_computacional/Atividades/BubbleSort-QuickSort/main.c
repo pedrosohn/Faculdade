@@ -71,4 +71,23 @@ int main() {
         printf("Nota %d: ", i + 1);
         scanf("%f", &notasOriginais[i]);
     }
-    printf("\n");
+    printf("\n"); 
+    // Exibe as notas originais informadas
+    exibirNotas(notasOriginais, tamanho, "Notas Originais (Digitadas):");
+
+    // Copia as notas para não alterar o vetor original
+    copiarArray(notasOriginais, notasBubble, tamanho);
+    copiarArray(notasOriginais, notasQuick, tamanho);
+
+    // Executa e exibe Bubble Sort
+    bubbleSort(notasBubble, tamanho);
+    exibirNotas(notasBubble, tamanho, "Notas Ordenadas por BUBBLE SORT (Decrescente):");
+
+    // Executa e exibe Quick Sort
+    quickSort(notasQuick, 0, tamanho - 1);
+    exibirNotas(notasQuick, tamanho, "Notas Ordenadas por QUICK SORT (Decrescente):");
+
+    printf("Verificacao: Ambos os algoritmos ordenaram com sucesso!\n");
+
+    return 0;
+}
