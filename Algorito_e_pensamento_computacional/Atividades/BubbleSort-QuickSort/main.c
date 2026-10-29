@@ -8,3 +8,9 @@ void exibirNotas(float notas[], int tamanho, const char *mensagem) {
     }
     printf("\n\n");
 }
+// Função para copiar os elementos de um array para outro
+void copiarArray(float origem[], float destino[], int tamanho) {
+    for (int i = 0; i < tamanho; i++) {
+        destino[i] = origem[i];
+    }
+}
